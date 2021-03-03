@@ -6,7 +6,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
 import ImageUpload from "./ImageUpload";
-import InstagramEmbed from
 
 function getModalStyle() {
   const top = 50;
@@ -180,6 +179,7 @@ function App() {
       <div className="app__posts">
         {posts.map(({ id, post }) => (
           <Post
+            id={id}
             username={post.username}
             imageUrl={post.imageUrl}
             caption={post.caption}
@@ -187,10 +187,10 @@ function App() {
         ))}
       </div>
 
-      {user?.displayName ? (
+      {user ? (
         <ImageUpload username={user.displayName} />
       ) : (
-        <h3>Sorry You need to login</h3>
+        <p className="un_post">You need to login to Post.</p>
       )}
     </div>
   );

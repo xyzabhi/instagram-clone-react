@@ -7,7 +7,7 @@
   height: 100vh;
 }
 .app__posts {
-  padding: 20px;
+  padding: 40px;
 }
 .app__header {
   object-fit: contain;
@@ -24,4 +24,13 @@
 .app__signup {
   display: flex;
   flex-direction: column;
+}
+.un_post {
+  text-align: center;
+  background-color: tomato;
+  padding: 20px;
+  color: white;
+  position: sticky;
+  bottom: 0px;
+  background-color: tomato;
 }
